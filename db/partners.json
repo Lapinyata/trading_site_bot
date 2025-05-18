@@ -3,9 +3,9 @@
     "name": "BRENT • Нефть Brent",
     "move": 1,
     "type": "Энергоносители",
-    "price": 900,
-    "forecast1": 0.5,
-    "forecast2": 0.67,
+    "price": 6443,
+    "forecast1": -2.35,
+    "forecast2": -0.03,
     "image": "img/Brent/preview.svg"
   },
   {
