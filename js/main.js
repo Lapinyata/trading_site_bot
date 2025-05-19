@@ -101,7 +101,7 @@ const logInInput = document.querySelector('#login'); // Получаю форм�
 const userName = document.querySelector('.user-name'); // Получаю форму, которая выводит логин авторизованного пользователя
 const buttonOut = document.querySelector('.button-out'); // Получаю кнопку "Выйти"
 const cardsRestaurants = document.querySelector('.cards-restaurants'); // Получаю блок с карточками ресторанов
-const containerPromo = document.querySelector('.container-promo'); // Получаю блок с промо
+// const containerPromo = document.querySelector('.container-promo'); // Получаю блок с промо
 const restaurants = document.querySelector('.restaurants'); // Получаю блок с ресторанами
 const menu = document.querySelector('.menu'); // Получаю блок с меню
 const logo = document.querySelector('.logo'); // Получаю лого в заголовке
@@ -242,7 +242,7 @@ function openGoods(event) { // Функция создания меню конк
   const restaurant = target.closest('.card-restaurant'); // Переменная, содержащая карточку, по элементу которой кликнули (closest осуществляет подъём по вышестоящим элементам, пока не найдёт элемент с нужным селектором)
   if (restaurant) { // Проверка, что кликнули именно по карточке (если мимо карточки, то будет NULL)
     cardsMenu.textContent = ''; // Очищаем меню
-    containerPromo.classList.add('hide'); // Добавляю класс hide блоку с промо
+    // containerPromo.classList.add('hide'); // Добавляю класс hide блоку с промо
     restaurants.classList.add('hide'); // Добавляю класс hide блоку с ресторанами
     menu.classList.remove('hide'); // Удаляю класс hide у блока с меню ресторана, на который кликнули
     const {name, type, forecast1, forecast2} = restaurant.info; // Деструктуризация полученного объекта (получаю от объекта карточки ресторана поля для того, чтобы в меню ресторана подставить в шапку)
@@ -301,7 +301,7 @@ function init() { // Функция инициализации
               const name = item.name.toLowerCase();
               return name.includes(value.toLowerCase()); // Возвращаю только те товары, которые соответствуют поиску
             });
-            containerPromo.classList.add('hide'); // Добавляю класс hide блоку с промо
+            // containerPromo.classList.add('hide'); // Добавляю класс hide блоку с промо
             restaurants.classList.add('hide'); // Добавляю класс hide блоку с ресторанами
             menu.classList.remove('hide'); // Удаляю класс hide у блока с меню ресторана, на который кликнули
             restaurantTitle.textContent = 'Результаты поиска'; // Задаю новую шапку меню
@@ -318,7 +318,7 @@ function init() { // Функция инициализации
   });
   cardsRestaurants.addEventListener('click', openGoods); // Событие, когда кликнули в блоке с карточками
   logo.addEventListener('click', function(){
-    containerPromo.classList.remove('hide'); // Удаляю класс hide у блока с промо
+    // containerPromo.classList.remove('hide'); // Удаляю класс hide у блока с промо
     restaurants.classList.remove('hide'); // Удаляю класс hide у блока с ресторанами
     menu.classList.add('hide'); // Добавляю класс hide блоку с меню ресторана, на который кликнули
     restaurantPrice.classList.remove('hide');
@@ -328,35 +328,35 @@ function init() { // Функция инициализации
 }
 
 init();
-if (window.innerWidth<=480) {
-  new Swiper('.swiper-container', { // Объект слайдера 
-    slidesPerView: 1, // Показывать один слайд за раз
-    loop: true, // Зациклить слайды
-    autoplay: { // Автовоспроизведение слайдера
-      delay: 5000,
-      disableOnInteraction: false, // Автовоспроизведение не будет отключено после взаимодействия с пользователем
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  })
-} else{
-  new Swiper('.swiper-container', { // Объект слайдера 
-    slidesPerView: 1, // Показывать один слайд за раз
-    loop: true, // Зациклить слайды
-    autoplay: { // Автовоспроизведение слайдера
-      delay: 5000,
-      disableOnInteraction: false, // Автовоспроизведение не будет отключено после взаимодействия с пользователем
-    },
-    effect: 'cube',
-    cubeEffect: {
-      shadow: false,
-      slideShadows: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  })
-}
+// if (window.innerWidth<=480) {
+//   new Swiper('.swiper-container', { // Объект слайдера 
+//     slidesPerView: 1, // Показывать один слайд за раз
+//     loop: true, // Зациклить слайды
+//     autoplay: { // Автовоспроизведение слайдера
+//       delay: 5000,
+//       disableOnInteraction: false, // Автовоспроизведение не будет отключено после взаимодействия с пользователем
+//     },
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true,
+//     },
+//   })
+// } else{
+//   new Swiper('.swiper-container', { // Объект слайдера 
+//     slidesPerView: 1, // Показывать один слайд за раз
+//     loop: true, // Зациклить слайды
+//     autoplay: { // Автовоспроизведение слайдера
+//       delay: 5000,
+//       disableOnInteraction: false, // Автовоспроизведение не будет отключено после взаимодействия с пользователем
+//     },
+//     effect: 'cube',
+//     cubeEffect: {
+//       shadow: false,
+//       slideShadows: false,
+//     },
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true,
+//     },
+//   })
+// }
