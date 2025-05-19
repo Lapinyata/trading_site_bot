@@ -10,7 +10,7 @@
   },
   {
     "name": "COPPER • Медь",
-    "move": 0,
+    "move": 1,
     "type": "Металлы",
     "price": 450,
     "forecast1": -0.1,
